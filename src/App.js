@@ -5,7 +5,6 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
 import {
   Platform,
   StyleSheet,
@@ -13,15 +12,22 @@ import {
   View,
   ImageBackground,
 } from 'react-native';
-import styles from './src/Styles';
+import styles from './Styles';
 
-import { Card, ListItem, Button, Avatar, FormLabel, FormInput } from 'react-native-elements';
+import { Card, ListItem, Button, Avatar, FormLabel, FormInput } from 'react-native-elements'
 
+class WelcomeScreen extends Component {
+  render() {
+    return (
+      <Text>Hello</Text>
+    );
+  }
+}
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {/* <ImageBackground source={require('./src/assets/images/bg1.jpg')} style={styles.appBackground}> */}
+        <ImageBackground source={require('./assets/images/bg1.jpg')} style={styles.appBackground}>
           <Card containerStyle={styles.loginPageContainer}>
             <View style={styles.login}>
               <Text style={styles.header}>
@@ -41,9 +47,8 @@ export default class App extends Component {
               />
             </View>
           </Card>
-        {/* </ImageBackground> */}
+        </ImageBackground>
       </View>
     );
   }
 }
-AppRegistry.registerComponent('ReactCalculator', () => App);
